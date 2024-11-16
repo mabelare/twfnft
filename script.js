@@ -13,20 +13,10 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
-const gallery = document.querySelector(".gallery-item");
-let scrollAmount = 0;
+const faq = document.querySelector(".faq");
+const faqcontainer = document.querySelector(".faq-content");
 
-function autoScroll() {
-  scrollAmount += 200;
-
-  if (scrollAmount >= gallery.scrollWidth) {
-    scrollAmount = 0;
-  }
-
-  gallery.scroll({
-    left: scrollAmount,
-    behavior: "smooth",
-  });
-
-  setInterval(autoScroll, 3000);
-}
+faq.addEventListener("click", () => {
+  faq.classList.toggle("active");
+  faq - Content.classList.toggle("active");
+});

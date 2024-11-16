@@ -3,6 +3,16 @@
   padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #f4f4f9;
+  line-height: 1.6;
+}
 .social-icons img {
   width: 40px;
   border: 1px solid black;
@@ -12,15 +22,12 @@
 }
 
 header {
-  z-index: 1000;
-  position: sticky;
+  z-index: 10;
+  position: fixed;
   background-color: white;
-  width: 100%;
   top: 0;
   left: 0;
-  padding: 70px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 20px 24px;
 }
 .nav-item2 {
   border: 1px solid black;
@@ -85,19 +92,25 @@ a {
   border: 1px solid rgb(202, 111, 111);
   border-radius: 30px;
   padding: 10px;
-  width: 9%;
+  width: 5%;
 }
+
 .second-row {
   background-color: rgb(216, 221, 232);
+  margin-top: 100px;
+  font-size: 30px;
 }
-.second-row h1,
-h2 {
+.second-row h1 {
+  text-align: center;
+  padding-top: 120px;
+}
+.second-row h2 {
   text-align: center;
 }
 #images {
   display: flex;
   gap: 80px;
-  margin-left: 50px;
+  margin-left: 100px;
   padding-top: 40px;
 }
 #images img {
@@ -105,7 +118,7 @@ h2 {
   border-radius: 40px;
 }
 .image1 {
-  margin-left: 60px;
+  margin-left: 100px;
   display: flex;
   gap: 80px;
   padding-top: 60px;
@@ -116,26 +129,68 @@ h2 {
   border-radius: 40px;
 }
 .gallery-item {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.5s ease-in-out;
-  scroll-behavior: smooth;
+  animation: scroll 10s linear;
 }
 .gallery-item img {
   width: 50%;
   object-fit: cover;
+  animation: moveZoom 2s ease-in-out infinite;
 }
-.gallery-item:hover {
-  transform: scale(1.2);
+
+@keyframes moveZoom {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  25% {
+    transform: scale(1.2) translate(10px, -10px);
+  }
+
+  50% {
+    transform: scale(1) translate(-10px, 10px);
+  }
+
+  75% {
+    transform: scale(1.2) translate(-10px, -10px);
+  }
+
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.gallery-item img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.gallery-item img:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.gallery-item img:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.gallery-item img:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.gallery-item img:nth-child(5) {
+  animation-delay: 2s;
 }
 
 .bar {
   display: block;
-  height: 3px;
+  height: 5px;
   margin: 2px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -143,37 +198,34 @@ h2 {
 }
 .third-row {
   text-align: center;
-  font-size: 20px;
-  margin-top: 200px;
+  font-size: 30px;
+  margin-top: 120px;
   overflow: hidden;
   position: relative;
 }
 
-.third-row h2 {
-  margin-left: 290px;
-}
-
 .discord {
   border: 1px solid rgb(97, 62, 62);
-  width: 50%;
+  width: 40%;
   background-color: rgb(97, 62, 62);
   color: #fff;
-  padding: 20px;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-bottom: 30px;
   font-size: 30px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 140px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   border-radius: 75px;
 }
 .third-row p {
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
+  font-size: 30px;
   line-height: 1.6;
   margin-bottom: 15px;
   color: #333;
-  width: 80%;
-  margin-left: 65px;
+  width: 90%;
 }
 .fourth {
   background-color: rgb(163, 214, 214);
@@ -188,11 +240,13 @@ h2 {
 .fourth p {
   text-align: center;
   padding: 30px;
-  font-size: 20px;
 }
 .fourth h2 {
   text-align: center;
-  font-size: 30px;
+}
+.fifth-row {
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .sixth-row {
@@ -200,59 +254,57 @@ h2 {
   text-align: center;
   padding: 30px;
 }
-.sixth-row h1 {
-  font-size: 25px;
-}
 
 .sixth-row p {
   margin-bottom: 30px;
   margin-top: 30px;
-  font-size: 20px;
 }
 
 .tilted img {
   align-items: center;
-  border: 5px solid #333;
+  border: 6px solid #333;
   margin-bottom: 40px;
-  border-radius: 15px;
+  border-radius: 40px;
   overflow: hidden;
+  width: 40%;
 }
 .tilted1 img {
   align-items: center;
-  border: 5px solid #333;
+  border: 6px solid #333;
   margin-bottom: 40px;
-  border-radius: 15px;
+  border-radius: 40px;
   overflow: hidden;
   transform: rotate(-5deg);
+  width: 40%;
 }
 .tilted2 img {
   align-items: center;
-  border: 5px solid #333;
+  border: 6px solid #333;
   margin-bottom: 40px;
-  border-radius: 15px;
+  border-radius: 40px;
   overflow: hidden;
   transform: rotate(-5deg);
+  width: 40%;
 }
 .tilted3 img {
   align-items: center;
-  border: 5px solid #333;
+  border: 6px solid #333;
   margin-bottom: 40px;
-  border-radius: 15px;
+  border-radius: 40px;
   overflow: hidden;
   transform: rotate(5deg);
+  width: 40%;
 }
 
 .community {
   border: 4px solid black;
   border-radius: 10px;
   width: 85%;
-  margin-left: 40px;
   padding-bottom: 60px;
   background-color: white;
   margin-top: 20px;
 }
 .community h3 {
-  font-size: 15px;
   margin-left: 20px;
   padding-top: 20px;
   margin-bottom: -20px;
@@ -261,13 +313,11 @@ h2 {
   border: 4px solid black;
   border-radius: 10px;
   width: 85%;
-  margin-left: 40px;
   padding-bottom: 60px;
   background-color: white;
   margin-top: 20px;
 }
 .pool h3 {
-  font-size: 15px;
   margin-left: 20px;
   padding-top: 20px;
   margin-bottom: -20px;
@@ -275,14 +325,6 @@ h2 {
 
 .pool p {
   margin-bottom: -50px;
-}
-
-.fifth {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  width: 90%;
-  margin-left: 20px;
 }
 
 .list img {
@@ -298,7 +340,6 @@ h2 {
 }
 
 .tilted-number {
-  font-size: 3rem;
   color: #333;
   font-weight: bold;
   transform: rotate(-10deg);
@@ -398,10 +439,20 @@ h2 {
   width: 30%;
 }
 
+@keyframes slideDown {
+  from {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  to {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
 @media (max-width: 500px) {
   .hamburger {
     display: block;
-    margin-right: -60px;
     font-size: 5px;
   }
   .hamburger.active .bar:nth-child(2) {
@@ -447,7 +498,109 @@ h2 {
   .second-row p {
     display: none;
   }
+
+  header {
+    width: 194vw;
+  }
+
   .second-row {
-    width: 100%;
+    width: 205vw;
+  }
+  .third-row {
+    width: 200vw;
+  }
+  .fourth {
+    width: 205vw;
+  }
+  .fifth-row {
+    width: 190vw;
+  }
+  .sixth-row {
+    width: 190vw;
+  }
+  .seventh-row {
+    width: 190vw;
+  }
+
+  .discord {
+    margin-left: 200px;
+  }
+  .third-row h2 {
+    margin-left: 300px;
+    font-size: 40px;
+  }
+  .third-row h1 {
+    margin-right: 160px;
+    font-size: 40px;
+  }
+  .third-row p {
+    margin-left: 62px;
+  }
+  .tilted-number {
+    font-size: 110px;
+  }
+
+  .fourth p {
+    font-size: 32px;
+  }
+  .fourth h1,
+  h2 {
+    font-size: 50px;
+  }
+  .community {
+    margin-left: 55px;
+  }
+  .pool {
+    margin-left: 55px;
+  }
+  .community h3 {
+    font-size: 40px;
+  }
+  .pool h3 {
+    font-size: 40px;
+  }
+  .fifth-row {
+    margin-left: 40px;
+  }
+  .fifth-row h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+  .fifth-row p {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .fifth-row h3 {
+    font-size: 30px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .fifth-row h4 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .sixth-row h1 {
+    font-size: 40px;
+  }
+  .sixth-row p {
+    font-size: 30px;
+  }
+
+  .seventh-row h1 {
+    font-size: 50px;
+    margin-left: 50px;
+  }
+  .seventh-row p {
+    font-size: 30px;
+    margin-left: 230px;
+  }
+  .seventh-row img {
+    margin-left: 300px;
+    margin-top: 60px;
+  }
+  .seventh-row h2 {
+    margin-left: 60px;
+    font-size: 30px;
   }
 }
