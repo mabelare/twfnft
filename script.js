@@ -13,19 +13,20 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
-const images = document.querySelectorAll(".side-scroll-image");
-let currentIndex = 0;
+const gallery = document.querySelector(".gallery-item");
+let scrollAmount = 0;
 
-function showNextImage() {
-  // Hide the current image
-  images[currentIndex].classList.remove("active");
+function autoScroll() {
+  scrollAmount += 200;
 
-  // Move to the next image
-  currentIndex = (currentIndex + 1) % images.length;
+  if (scrollAmount >= gallery.scrollWidth) {
+    scrollAmount = 0;
+  }
 
-  // Show the next image
-  images[currentIndex].classList.add("active");
+  gallery.scroll({
+    left: scrollAmount,
+    behavior: "smooth",
+  });
+
+  setInterval(autoScroll, 3000);
 }
-
-// Change image every 4 seconds (adjust as needed)
-setInterval(showNextImage, 4000);
