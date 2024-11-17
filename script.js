@@ -12,11 +12,3 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
-
-const faq = document.querySelector(".faq");
-const faqcontainer = document.querySelector(".faq-content");
-
-faq.addEventListener("click", () => {
-  faq.classList.toggle("active");
-  faq - Content.classList.toggle("active");
-});
