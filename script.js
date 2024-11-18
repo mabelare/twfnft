@@ -12,3 +12,25 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
+
+document.querySelectorAll(".faq-container h4").forEach((question) => {
+  let plusIcon = question.querySelector("span");
+  if (!plusIcon) {
+    plusIcon = document.createElement("span");
+    plusIcon.textContent = "+";
+    question.appendChild(plusIcon);
+  }
+
+  question.addEventListener("click", () => {
+    const answer = question.nextElementSibling;
+    const plusIcon = question.querySelector("span");
+
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+      plusIcon.textContent = "+";
+    } else {
+      answer.style.display = "block";
+      plusIcon.textContent = "-";
+    }
+  });
+});

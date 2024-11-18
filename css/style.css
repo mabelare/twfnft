@@ -26,11 +26,11 @@ body {
 }
 
 .social-icons1 img {
-  width: 30px;
   border: 1px solid black;
   border-radius: 20px;
   padding: 5px;
   margin: 10px;
+  width: 40px;
 }
 
 header {
@@ -303,7 +303,7 @@ a {
   width: calc(90%);
   display: flex;
   gap: 40px;
-  animation: scroll 4s infinite;
+  animation: scroll 15s infinite;
   padding: 20px;
   border: 20px solid transparent;
   z-index: 1;
@@ -352,18 +352,65 @@ a {
 .seventh-row h1 {
   text-align: center;
 }
-.seventh-row h2 {
-  text-align: center;
-}
 .seventh-row img {
-  border: 1px solid blue;
-  border-radius: 590px;
-  width: 30%;
+  border-radius: 90%;
 }
 .faq-container {
+  margin-top: 90px;
+  margin-bottom: 90px;
   background-color: rgb(204, 230, 228);
+  background-color: rgb(203, 241, 227);
   padding: 40px;
 }
+.faq-container h1 {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #1c1c5b;
+}
+.faq-container h4 {
+  color: #1c1c5b;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  border: 3px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+.faq-container h4 span {
+  font-size: 34px;
+  font-weight: bold;
+}
+.faq-container p {
+  display: none;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: white;
+}
+.line {
+  position: relative;
+  width: 2px;
+  background-color: #000;
+  margin-right: 10px;
+  border-width: 40%;
+  border-left: 2px solid black;
+}
+.line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
 @media (max-width: 600px) {
   .hamburger {
     display: block;
@@ -378,6 +425,15 @@ a {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+  .faq-container {
+    font-size: 20px;
+  }
+  .faq-container p {
+    font-size: 30px;
+  }
+  .faq-container h4 {
+    font-size: 21px;
   }
 
   .nav-menu {
@@ -520,15 +576,18 @@ a {
   }
   .seventh-row p {
     font-size: 30px;
-    margin-left: 230px;
+    margin-left: 170px;
+    width: 70%;
   }
   .seventh-row img {
-    margin-left: 300px;
+    margin-left: 250px;
     margin-top: 60px;
+    width: 35%;
   }
   .seventh-row h2 {
-    margin-left: 60px;
+    margin-left: 50px;
     font-size: 30px;
+    text-align: center;
   }
   .gallery-item video {
     width: 205vw;
@@ -543,7 +602,6 @@ a {
     margin-left: 270px;
     width: 100vw;
   }
-
   .section p {
     font-size: 25px;
     width: 160vw;
@@ -568,7 +626,15 @@ a {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
+  .faq-container {
+    font-size: 20px;
+  }
+  .faq-container p {
+    font-size: 30px;
+  }
+  .faq-container h4 {
+    font-size: 25px;
+  }
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -669,6 +735,8 @@ a {
     gap: 20px;
   }
   .seventh-row img {
+    width: 30%;
+    margin-left: 470px;
   }
   .discord {
     margin-left: 390px;
@@ -684,7 +752,7 @@ a {
   }
   .third-row p {
     margin-left: 82px;
-    font-size: 80px;
+    font-size: 40px;
   }
   .tilted-number {
     font-size: 210px;
@@ -719,12 +787,18 @@ a {
   .fifth-row p {
     font-size: 30px;
     margin-bottom: 20px;
+    width: 60%;
   }
   .fifth-row h3 {
     font-size: 30px;
     font-weight: 200;
     text-align: center;
     margin-bottom: 40px;
+    width: 50%;
+    margin-left: 350px;
+  }
+  .list {
+    margin-left: 400px;
   }
   .fifth-row h4 {
     font-size: 30px;
@@ -759,12 +833,13 @@ a {
   }
   .seventh-row h2 {
     font-size: 30px;
+    text-align: center;
   }
   .gallery-item video {
     width: 205vw;
   }
   .faq-container {
-    width: 185vw;
+    width: 195vw;
   }
   .footer {
     width: 185vw;
@@ -800,6 +875,15 @@ a {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+  .faq-container {
+    font-size: 40px;
+  }
+  .faq-container p {
+    font-size: 40px;
+  }
+  .faq-container h4 {
+    font-size: 30px;
+  }
   .big-number {
     margin-right: 800px;
     margin-top: -750px;
@@ -917,11 +1001,20 @@ a {
     width: 198vw;
   }
   .seventh-row {
-    width: 190vw;
-    align-items: center;
-    gap: 20px;
+    width: 198vw;
   }
-  .seventh-row img {
+  .lit1 {
+    margin-left: 1300px;
+    margin-top: -770px;
+  }
+  .lit {
+    margin-top: 100px;
+    margin-left: 200px;
+    padding-bottom: 20px;
+  }
+  .lit6 {
+    margin-left: 700px;
+    padding: 40px;
   }
   .discord {
     margin-left: 490px;
@@ -980,28 +1073,35 @@ a {
     margin-left: 40px;
   }
   .fifth-row h1 {
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
   }
   .fifth-row p {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 20px;
   }
   .fifth-row h3 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 200;
     text-align: center;
     margin-bottom: 40px;
+    width: 60%;
+    margin-left: 370px;
   }
   .fifth-row h4 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 10px;
+  }
+  .list {
+    width: 50%;
+    margin-left: 500px;
   }
   .sixth-row h1 {
     font-size: 80px;
     width: 50%;
     margin-left: 480px;
   }
+
   .sixth-row p {
     font-size: 40px;
     width: 60%;
@@ -1026,17 +1126,18 @@ a {
     text-align: center;
   }
   .seventh-row p {
-    font-size: 30px;
-    text-align: center;
+    font-size: 35px;
+    width: 80%;
   }
   .seventh-row h2 {
     font-size: 30px;
+    margin-top: 70px;
   }
   .gallery-item video {
     width: 205vw;
   }
   .faq-container {
-    width: 185vw;
+    width: 195vw;
   }
   .footer {
     width: 185vw;
@@ -1062,6 +1163,7 @@ a {
     font-size: 5px;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-right: 40px;
   }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
@@ -1074,9 +1176,658 @@ a {
     transform: translateY(-8px) rotate(-45deg);
   }
   .big-number {
-    margin-right: 800px;
+    margin-right: 1300px;
     margin-top: -750px;
     padding-bottom: 70px;
+  }
+  .faq-container {
+    font-size: 40px;
+  }
+  .faq-container p {
+    font-size: 50px;
+  }
+  .faq-container h4 {
+    font-size: 35px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    border: 1px solid black;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 80%;
+    margin-left: 130px;
+    transition: 0.3s;
+  }
+  .nav-item3 {
+    display: flex;
+    margin-left: 900px;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 50px;
+    border: 1px solid black;
+  }
+
+  .nav-item4 {
+    border: 1px solid black;
+
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 50px;
+    white-space: nowrap;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+    font-size: 60px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-item1 {
+    font-size: 50px;
+  }
+  .nav-item2 {
+    font-size: 50px;
+  }
+  .nav-branding {
+    font-size: 60px;
+    margin-left: 60px;
+  }
+  .nav-branding1 {
+    margin-left: 70px;
+    margin-bottom: -210px;
+  }
+  .nav-branding1 h2 {
+    font-size: 100px;
+  }
+  header {
+    width: 210vw;
+  }
+
+  .bar {
+    margin: 5px;
+  }
+  .second-row h1 {
+    font-size: 80px;
+    padding-top: 250px;
+    margin-left: -1300px;
+  }
+  .second-row h2 {
+    font-size: 80px;
+    margin-left: 80px;
+    width: 35%;
+  }
+  .second-row h5 {
+    padding-bottom: -90px;
+    margin-bottom: -300px;
+    font-size: 40px;
+    margin-left: 190px;
+    width: 35%;
+  }
+  .second-row h4 {
+    font-size: 40px;
+  }
+  .second-row {
+    width: 210vw;
+    padding-top: 10px;
+  }
+  #images {
+    margin-left: 890px;
+    margin-top: -600px;
+    width: 60%;
+  }
+
+  .image1 {
+    margin-left: 890px;
+    width: 60%;
+    margin-top: -20px;
+  }
+
+  .third-row {
+    width: 210vw;
+  }
+  .fourth {
+    width: 210vw;
+    padding-bottom: 70px;
+  }
+  .fifth-row {
+    width: 195vw;
+  }
+  .fifth-row {
+    margin-left: 40px;
+    padding-bottom: 60px;
+  }
+  .fifth-row h1 {
+    font-size: 70px;
+    text-align: center;
+  }
+  .fifth-row p {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .fifth-row h3 {
+    font-size: 50px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 60%;
+    margin-left: 470px;
+  }
+  .fifth-row h4 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  .list {
+    width: 50%;
+    margin-left: 600px;
+  }
+  .sixth-row {
+    width: 205vw;
+  }
+  .seventh-row {
+    width: 190vw;
+    align-items: center;
+    gap: 20px;
+  }
+  .lit1 {
+    margin-left: 1300px;
+    margin-top: -770px;
+  }
+  .lit {
+    margin-top: 100px;
+    margin-left: 200px;
+    padding-bottom: 20px;
+  }
+  .lit6 {
+    margin-left: 700px;
+    padding: 40px;
+  }
+  .discord {
+    margin-left: 490px;
+    font-size: 70px;
+  }
+  .third-row h2 {
+    margin-left: 300px;
+    font-size: 80px;
+  }
+  .third-row h1 {
+    margin-right: 160px;
+    font-size: 80px;
+  }
+  .third-row p {
+    font-size: 45px;
+    width: 60%;
+    margin-left: 800px;
+  }
+  .tilted-number {
+    font-size: 210px;
+  }
+
+  .lin p {
+    font-size: 70px;
+    width: 50%;
+    margin-left: 990px;
+  }
+  .fourth h1 {
+    margin-left: 630px;
+    padding-top: 40px;
+    font-size: 90px;
+  }
+  .fourth h2 {
+    font-size: 50px;
+  }
+  .community {
+    width: 40%;
+    margin-top: 70px;
+    margin-left: 90px;
+  }
+  .fourth p {
+    font-size: 50px;
+  }
+  .pool {
+    margin-left: 1200px;
+    width: 40%;
+    margin-top: -730px;
+  }
+  .community h3 {
+    font-size: 60px;
+  }
+  .pool h3 {
+    font-size: 60px;
+  }
+
+  .sixth-row h1 {
+    font-size: 80px;
+    width: 50%;
+    margin-left: 480px;
+  }
+  .sixth-row p {
+    font-size: 50px;
+    width: 60%;
+    margin-left: 390px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .sixth-row img {
+    width: 60vw;
+  }
+  .tilted {
+    display: flex;
+    gap: 200px;
+    margin-left: 230px;
+  }
+  .tilteds {
+    display: flex;
+    gap: 200px;
+    margin-left: 290px;
+    margin-top: 50px;
+  }
+  .seventh-row h1 {
+    font-size: 80px;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .seventh-row p {
+    font-size: 35px;
+    width: 80%;
+  }
+  .seventh-row h2 {
+    font-size: 30px;
+    margin-top: 70px;
+  }
+  .gallery-item video {
+    width: 210vw;
+  }
+  .faq-container {
+    width: 199vw;
+  }
+  .footer {
+    width: 185vw;
+  }
+  .social-icons1 {
+    margin-left: 1590px;
+    width: 60vw;
+    margin-bottom: -70px;
+  }
+  .social-icons1 img {
+    width: 8%;
+  }
+  .section p {
+    font-size: 35px;
+    width: 110vw;
+    margin-left: 400px;
+    margin-top: -60px;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1300px) {
+  .hamburger {
+    display: block;
+    font-size: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 40px;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .big-number {
+    margin-right: 1500px;
+    margin-top: -750px;
+    padding-bottom: 70px;
+  }
+  .faq-container {
+    font-size: 40px;
+  }
+  .faq-container p {
+    font-size: 50px;
+  }
+  .faq-container h4 {
+    font-size: 35px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    border: 1px solid black;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 80%;
+    margin-left: 130px;
+    transition: 0.3s;
+  }
+  .nav-item3 {
+    display: flex;
+    margin-left: 900px;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 50px;
+    border: 1px solid black;
+  }
+
+  .nav-item4 {
+    border: 1px solid black;
+
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 50px;
+    white-space: nowrap;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+    font-size: 60px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-item1 {
+    font-size: 50px;
+  }
+  .nav-item2 {
+    font-size: 50px;
+  }
+  .nav-branding {
+    font-size: 60px;
+    margin-left: 60px;
+  }
+  .nav-branding1 {
+    margin-left: 70px;
+    margin-bottom: -210px;
+  }
+  .nav-branding1 h2 {
+    font-size: 100px;
+  }
+  header {
+    width: 220vw;
+  }
+
+  .bar {
+    margin: 5px;
+  }
+  .second-row h1 {
+    font-size: 80px;
+    padding-top: 250px;
+    margin-left: -1700px;
+  }
+  .second-row h2 {
+    font-size: 80px;
+    margin-left: 80px;
+    width: 35%;
+  }
+  .second-row h5 {
+    padding-bottom: -90px;
+    margin-bottom: -300px;
+    font-size: 40px;
+    margin-left: 190px;
+    width: 25%;
+  }
+  .second-row h4 {
+    font-size: 40px;
+  }
+  .second-row {
+    width: 222vw;
+    padding-top: 10px;
+  }
+  #images {
+    margin-left: 1090px;
+    margin-top: -400px;
+    width: 60%;
+  }
+
+  .image1 {
+    margin-left: 1090px;
+    width: 60%;
+    margin-top: -20px;
+  }
+
+  .third-row {
+    width: 218vw;
+  }
+  .fourth {
+    width: 222vw;
+    padding-bottom: 70px;
+  }
+  .fifth-row {
+    width: 210vw;
+  }
+  .fifth-row {
+    margin-left: 80px;
+    padding-bottom: 60px;
+  }
+  .fifth-row h1 {
+    font-size: 70px;
+    text-align: center;
+  }
+  .fifth-row p {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .fifth-row h3 {
+    font-size: 50px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 60%;
+    margin-left: 470px;
+  }
+  .fifth-row h4 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  .list {
+    width: 50%;
+    margin-left: 800px;
+  }
+  .sixth-row {
+    width: 218vw;
+  }
+  .seventh-row {
+    width: 210vw;
+    align-items: center;
+    gap: 20px;
+  }
+  .lit1 {
+    margin-left: 1600px;
+    margin-top: -770px;
+  }
+  .lit {
+    margin-top: 100px;
+    margin-left: 200px;
+    padding-bottom: 20px;
+  }
+  .lit6 {
+    margin-left: 900px;
+    padding: 40px;
+  }
+  .discord {
+    margin-left: 900px;
+    font-size: 70px;
+    width: 30%;
+  }
+  .third-row h2 {
+    margin-left: 300px;
+    font-size: 80px;
+  }
+  .third-row h1 {
+    margin-right: 160px;
+    font-size: 80px;
+  }
+  .third-row p {
+    font-size: 45px;
+    width: 50%;
+    margin-left: 1000px;
+  }
+  .tilted-number {
+    font-size: 210px;
+  }
+
+  .lin p {
+    font-size: 70px;
+    width: 50%;
+    margin-left: 990px;
+  }
+  .fourth h1 {
+    margin-left: 630px;
+    padding-top: 40px;
+    font-size: 90px;
+  }
+  .fourth h2 {
+    font-size: 50px;
+  }
+  .community {
+    width: 40%;
+    margin-top: 70px;
+    margin-left: 90px;
+  }
+  .fourth p {
+    font-size: 50px;
+  }
+  .pool {
+    margin-left: 1500px;
+    width: 40%;
+    margin-top: -730px;
+  }
+  .community h3 {
+    font-size: 60px;
+  }
+  .pool h3 {
+    font-size: 60px;
+  }
+
+  .sixth-row h1 {
+    font-size: 80px;
+    width: 50%;
+    margin-left: 680px;
+  }
+  .sixth-row p {
+    font-size: 50px;
+    width: 60%;
+    margin-left: 590px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .sixth-row img {
+    width: 50vw;
+  }
+  .tilted {
+    display: flex;
+    gap: 200px;
+    margin-left: 390px;
+  }
+  .tilteds {
+    display: flex;
+    gap: 200px;
+    margin-left: 490px;
+    margin-top: 70px;
+  }
+  .seventh-row h1 {
+    font-size: 80px;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .seventh-row p {
+    font-size: 35px;
+    width: 80%;
+  }
+  .seventh-row h2 {
+    font-size: 30px;
+    margin-top: 70px;
+  }
+  .gallery-item video {
+    width: 222vw;
+  }
+  .faq-container {
+    width: 215vw;
+  }
+  .footer {
+    width: 185vw;
+  }
+  .social-icons1 {
+    margin-left: 1590px;
+    width: 60vw;
+    margin-bottom: -70px;
+  }
+  .social-icons1 img {
+    width: 8%;
+  }
+  .section p {
+    font-size: 35px;
+    width: 110vw;
+    margin-left: 400px;
+    margin-top: -60px;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 1301px) {
+  .hamburger {
+    display: block;
+    font-size: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 40px;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+  header {
+    width: 100vw;
+    padding: 10px;
+  }
+  .faq-container {
+    font-size: 40px;
+  }
+  .faq-container p {
+    font-size: 40px;
+  }
+  .faq-container h4 {
+    font-size: 30px;
+  }
+  .big-number {
+    margin-right: 800px;
+    margin-top: -430px;
+    padding-bottom: 90px;
+  }
+  .side-scroll-image img {
+    width: 30%;
   }
   .nav-menu {
     position: fixed;
@@ -1092,24 +1843,25 @@ a {
   }
   .nav-item3 {
     display: flex;
-    margin-left: 450px;
+    margin-left: 580px;
     border-radius: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 40px;
     padding-right: 40px;
-    font-size: 40px;
+    font-size: 20px;
     border: 1px solid black;
   }
 
   .nav-item4 {
     border: 1px solid black;
+    margin-left: 50px;
     border-radius: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
-    font-size: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
     white-space: nowrap;
   }
 
@@ -1123,112 +1875,131 @@ a {
   }
 
   .nav-branding {
-    font-size: 50px;
-    margin-left: -30px;
+    font-size: 30px;
+    margin-right: 40px;
   }
   .nav-branding1 {
-    margin-left: 100px;
-    margin-bottom: -150px;
+    margin-left: 30px;
+    margin-bottom: -110px;
   }
   .nav-branding1 h2 {
-    font-size: 90px;
-  }
-  header {
-    width: 200vw;
+    font-size: 50px;
   }
 
   .bar {
     margin: 5px;
   }
   .second-row h1 {
-    font-size: 80px;
-    padding-top: 250px;
-    margin-left: -1000px;
+    font-size: 40px;
+
+    margin-top: 80px;
+    margin-right: 800px;
   }
   .second-row h2 {
-    font-size: 80px;
+    font-size: 40px;
     margin-left: 80px;
     width: 35%;
   }
   .second-row h5 {
-    padding-bottom: -90px;
-    margin-bottom: -300px;
-    font-size: 40px;
-    margin-left: 120px;
+    padding-bottom: -80px;
+    margin-bottom: -250px;
+    font-size: 20px;
+    margin-left: 80px;
     width: 35%;
   }
   .second-row h4 {
     font-size: 40px;
   }
   .second-row {
-    width: 205vw;
+    width: 100vw;
     padding-top: 10px;
   }
   #images {
-    margin-left: 890px;
-    margin-top: -600px;
+    margin-left: 800px;
+    margin-top: -100px;
     width: 50%;
   }
 
   .image1 {
-    margin-left: 890px;
+    margin-left: 800px;
     width: 50%;
     margin-top: -20px;
   }
 
   .third-row {
-    width: 200vw;
+    width: 100vw;
   }
   .fourth {
-    width: 205vw;
+    width: 100vw;
     padding-bottom: 70px;
   }
   .fifth-row {
-    width: 190vw;
+    width: 90vw;
   }
   .sixth-row {
-    width: 198vw;
+    width: 100vw;
   }
   .seventh-row {
-    width: 190vw;
-    align-items: center;
-    gap: 20px;
+    width: 95vw;
   }
-  .seventh-row img {
+  .lit1 {
+    margin-left: 1000px;
+    margin-top: -450px;
   }
+  .lit img {
+    width: 20%;
+  }
+  .lit1 img {
+    width: 50%;
+  }
+  .lit {
+    margin-top: 100px;
+    margin-left: 200px;
+    padding-bottom: 20px;
+  }
+  .lit6 {
+    margin-left: 600px;
+    padding: 40px;
+  }
+  .lit6 img {
+    width: 30%;
+  }
+
   .discord {
-    margin-left: 490px;
-    font-size: 70px;
+    margin-left: 550px;
+    font-size: 40px;
+    width: 25%;
   }
   .third-row h2 {
     margin-left: 300px;
-    font-size: 80px;
+    font-size: 50px;
   }
   .third-row h1 {
-    margin-right: 160px;
-    font-size: 80px;
+    margin-right: 80px;
+    font-size: 50px;
   }
   .third-row p {
-    font-size: 35px;
-    width: 50%;
-    margin-left: 800px;
+    font-size: 20px;
+    width: 40%;
+    margin-left: 700px;
   }
+
   .tilted-number {
-    font-size: 210px;
+    font-size: 100px;
   }
 
   .lin p {
-    font-size: 60px;
+    font-size: 40px;
     width: 50%;
-    margin-left: 690px;
+    margin-left: 550px;
   }
   .fourth h1 {
-    margin-left: 430px;
+    margin-left: 540px;
     padding-top: 40px;
-    font-size: 90px;
+    font-size: 40px;
   }
   .fourth h2 {
-    font-size: 50px;
+    font-size: 30px;
   }
   .community {
     width: 40%;
@@ -1236,95 +2007,113 @@ a {
     margin-left: 80px;
   }
   .fourth p {
-    font-size: 40px;
+    font-size: 30px;
   }
   .pool {
-    margin-left: 910px;
+    margin-left: 800px;
     width: 40%;
-    margin-top: -730px;
+    margin-top: -550px;
   }
   .community h3 {
-    font-size: 60px;
+    font-size: 40px;
   }
   .pool h3 {
-    font-size: 60px;
+    font-size: 40px;
   }
   .fifth-row {
-    margin-left: 40px;
+    margin-left: 90px;
   }
   .fifth-row h1 {
     font-size: 50px;
     text-align: center;
   }
   .fifth-row p {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 20px;
   }
   .fifth-row h3 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 200;
     text-align: center;
     margin-bottom: 40px;
+    width: 60%;
+    margin-left: 270px;
   }
   .fifth-row h4 {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 10px;
   }
-  .sixth-row h1 {
-    font-size: 80px;
+  .list {
     width: 50%;
-    margin-left: 480px;
+    margin-left: 400px;
   }
-  .sixth-row p {
+  .sixth-row h1 {
     font-size: 40px;
+    width: 50%;
+    margin-left: 350px;
+  }
+
+  .sixth-row p {
+    font-size: 20px;
     width: 60%;
-    margin-left: 390px;
+    margin-left: 290px;
     padding-top: 40px;
   }
   .sixth-row img {
-    width: 60vw;
+    width: 20vw;
   }
   .tilted {
     display: flex;
     gap: 200px;
-    margin-left: 130px;
+    margin-left: 200px;
   }
   .tilteds {
     display: flex;
     gap: 200px;
-    margin-left: 200px;
+    margin-left: 250px;
   }
   .seventh-row h1 {
     font-size: 50px;
     text-align: center;
   }
   .seventh-row p {
-    font-size: 30px;
-    text-align: center;
+    font-size: 15px;
+    width: 80%;
   }
   .seventh-row h2 {
-    font-size: 30px;
+    font-size: 20px;
+    margin-top: 70px;
   }
   .gallery-item video {
-    width: 205vw;
+    width: 100vw;
   }
   .faq-container {
-    width: 185vw;
+    width: 95vw;
   }
+  .faq-container h1 {
+    font-size: 30px;
+  }
+  .faq-container h4 {
+    font-size: 15px;
+  }
+  .faq-container p {
+    font-size: 20px;
+  }
+
   .footer {
-    width: 185vw;
+    width: 75vw;
   }
   .social-icons1 {
-    margin-left: 1270px;
-    width: 50vw;
+    margin-left: 1150px;
+    width: 30vw;
   }
   .social-icons1 img {
     width: 8%;
   }
   .section p {
-    font-size: 25px;
+    font-size: 20px;
     width: 110vw;
-    margin-left: 400px;
+    margin-left: 300px;
     margin-top: -60px;
     padding-bottom: 50px;
   }
