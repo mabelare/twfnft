@@ -1,16 +1,12 @@
-* {
-  margin: 0;
+body {
   padding: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  background-color: #72d1f1;
 }
+
 em {
   color: rgb(82, 82, 223);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-body {
-  background-color: #f4f4f9;
-  line-height: 1.6;
 }
 .social-icons img {
   width: 40px;
@@ -34,7 +30,8 @@ header {
   background-color: white;
   top: 0;
   left: 0;
-  padding: 40px 24px;
+  padding: 10px 14px;
+  width: 100%;
 }
 .nav-item2 {
   border: 1px solid black;
@@ -56,7 +53,6 @@ header {
   padding-right: 110px;
   font-size: 30px;
 }
-
 li {
   list-style: none;
   color: black;
@@ -91,7 +87,6 @@ a {
 .nav-link:hover {
   color: dodgerblue;
 }
-
 .hamburger {
   display: none;
   cursor: pointer;
@@ -145,8 +140,6 @@ a {
   text-align: center;
   font-size: 30px;
   margin-top: 50px;
-  overflow: hidden;
-  position: relative;
 }
 
 .discord {
@@ -434,13 +427,13 @@ a {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 40px;
     gap: 0;
     border: 1px solid black;
     margin-top: 20px;
     border-radius: 20px;
     width: 60%;
-    margin-left: 130px;
+    margin-left: 30%;
     transition: 0.3s;
   }
   .nav-lin {
@@ -454,14 +447,13 @@ a {
   .nav-menu.active {
     left: 0;
   }
-
   .nav-branding {
     font-size: 40px;
     margin-left: -30px;
   }
   .nav-branding1 {
     font-size: 5em;
-    margin-left: 300px;
+    margin-left: 30px;
   }
   .second-row h5 {
     display: none;
@@ -469,35 +461,13 @@ a {
   .second-row h1 {
     padding-top: 120px;
   }
-  header {
-    width: 194vw;
-  }
 
-  .second-row {
-    width: 205vw;
-  }
   #images {
     margin-left: 100px;
   }
 
   .image1 {
     margin-left: 100px;
-  }
-
-  .third-row {
-    width: 200vw;
-  }
-  .fourth {
-    width: 205vw;
-  }
-  .fifth-row {
-    width: 190vw;
-  }
-  .sixth-row {
-    width: 190vw;
-  }
-  .seventh-row {
-    width: 190vw;
   }
 
   .discord {
@@ -584,14 +554,8 @@ a {
     font-size: 30px;
     text-align: center;
   }
-  .gallery-item video {
-    width: 205vw;
-  }
-  .faq-container {
-    width: 185vw;
-  }
-  .footer {
-    width: 185vw;
+  .gallery-item {
+    display: none;
   }
   .social-icons1 {
     margin-left: 270px;
