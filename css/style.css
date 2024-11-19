@@ -135,7 +135,7 @@ a {
 }
 .third-row {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   overflow: hidden;
   position: relative;
 }
@@ -489,7 +489,6 @@ a {
   .third-row h1 {
     font-size: 20px;
     margin-right: 40px;
-    margin-top: -5px;
   }
   .third-row p {
     font-size: 15px;
