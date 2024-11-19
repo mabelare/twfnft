@@ -454,18 +454,30 @@ a {
     margin-left: 100px;
   }
   .second-row,
-  .third-row,
-  header,
-  .fourth,
-  .fifth-row,
-  .sixth-row,
-  .seventh-row,
+  header {
+    width: 200vw;
+  }
+  .third-row {
+    width: 190vw;
+  }
+  .fourth {
+    width: 200vw;
+  }
+  .fifth-row {
+    width: 180vw;
+  }
+  .sixth-row {
+    width: 200vw;
+  }
+  .seventh-row {
+    width: 190vw;
+  }
   .faq-container {
     width: 200vw;
   }
 
   .discord {
-    margin-left: 120px;
+    margin-left: 220px;
   }
   .third-row h2 {
     font-size: 40px;
